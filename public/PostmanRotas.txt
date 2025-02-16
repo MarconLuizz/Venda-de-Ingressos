@@ -1,0 +1,57 @@
+Criar usuário: POST
+localhost:3000/auth/register
+
+Login de usuário: POST
+localhost:3000/auth/login
+
+_______________________________________________________________________________
+CRUD dos ingressos
+_______________________________________________________________________________
+- Criação de ingressos: POST
+localhost:3000/tickets
+{
+  "nome": "",
+  "preco": 
+  "quantidadeDisponivel": 
+}
+_______________________________________________________________________________
+- Atualização dos ingressos: PUT
+localhost:3000/tickets/id
+{
+  "nome": "",
+  "preco": 
+  "quantidadeDisponivel": 
+}
+_______________________________________________________________________________
+- Ver ingressos: GET
+localhost:3000/tickets
+
+- Deletar ingressos: DELETE
+localhost:3000/tickets/id
+_______________________________________________________________________________
+
+- Compra de ingressos: POST
+localhost:3000/purchases
+{
+  "purchases": [
+    {
+      "ticketId": "id",
+      "quantity": 3
+    }
+  ]
+}
+
+- Visualizar histórico de compras do usuário atual: GET
+localhost:3000/purchases/history
+
+Interface:
+localhost:3000 - Login
+--> Realize o login
+--> Meus ingressos. (irá gerar o token de usuário na barra de pesquisa, copie
+                    o token para a etapa de visualizar ingresso individualmente)
+--> Detalhes do ingresso. (cole o token de usuário no final da rota que está na 
+                            barra de pesquisa. exemplo: "www...?token=<id de usuário>)
+
+Obs: 
+--> Ao clicar em "Voltar ao histórico", insira o token de usuário novamente na barra
+de pesquisa.
